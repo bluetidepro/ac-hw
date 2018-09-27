@@ -1,0 +1,77 @@
+@import 'scss/_vars.scss';
+@import 'scss/_mixins.scss';
+
+.Form {
+  align-items: stretch;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+
+  .InputPrepend {
+    display: flex;
+    margin-right: -1px;
+
+    > span {
+      align-items: center;
+      background: $white;
+      border-radius: $border-radius;
+      border-bottom-right-radius: 0;
+      border-top-right-radius: 0;
+      border: 1px solid $grey_100;
+      border-right: none;
+      box-shadow: $shadow_inset_400;
+      color: $blue_100;
+      display: flex;
+      font-size: $size_600;
+      line-height: 1.4;
+      margin: 0;
+      padding: $size_350 $size_100 $size_350 $size_400;
+      text-align: center;
+      white-space: nowrap;
+    }
+  }
+  .Input {
+    background: $white;
+    border: 1px solid $grey_100;
+    border-left: none;
+    border-right: none;
+    box-shadow: $shadow_inset_450;
+    color: $grey_400;
+    display: block;
+    flex: 1 1 auto;
+    font-family: $font_ibm_plex;
+    font-size: $size_700;
+    font-weight: $font_ibm_plex_semibold;
+    margin: 0;
+    overflow: visible;
+    padding: 0 $size_300 0 $size_200;
+    position: relative;
+    width: 1%;
+
+    &:active,
+    &:focus {
+      outline: none;
+    }
+    @include placeholder {
+      color: $grey_100;
+    }
+  }
+  .InputAppend {
+    display: flex;
+    margin-left: -1px;
+
+    .Button {
+      border-bottom-left-radius: 0;
+      border-top-left-radius: 0;
+      height: 100%;
+      padding: $size_350;
+      z-index: 2;
+    }
+  }
+  &._isFocused {
+    .Input,
+    .InputPrepend > span {
+      border-color: $blue_400;
+    }
+  }
+}

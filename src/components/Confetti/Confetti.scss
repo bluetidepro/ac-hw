@@ -1,0 +1,29 @@
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+// Extra
+#Confetti {
+  opacity: 0;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+
+  &._show {
+    animation: fadeInOut 1500ms ease-in-out;
+  }
+}

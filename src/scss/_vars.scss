@@ -1,0 +1,53 @@
+// Fonts
+$font_weight_400: 400;
+$font_poppins: 'Poppins', sans-serif;
+$font_poppins_bold: 600;
+$font_ibm_plex: 'IBM Plex Sans', sans-serif;
+$font_ibm_plex_semibold: 700;
+
+// Color
+$white: #fff;
+$black: #000;
+
+$green_200: #b6f2e4;
+$green_400: #19cca3;
+$green_500: #006e54;
+$green_600: #002119;
+
+$red_400: #ff4f60;
+
+$blue_100: #9298ad;
+$blue_200: #e3ebfc;
+$blue_400: #356ae6;
+
+$grey_100: #ced3e0;
+$grey_200: #4e5468;
+$grey_400: #1f2129;
+
+$background: #fafbff;
+$heading: $grey_400;
+$text: $grey_200;
+
+// Sizing
+$size_base: 1rem; // 1rem:16px
+
+$size_100: $size_base / 8; // 0.125rem:2px
+$size_200: $size_base / 4; // 0.25rem:4px
+$size_300: $size_base * 0.5; // 0.5rem:8px
+$size_350: $size_base * 0.75; // 0.75rem:12px
+$size_400: $size_base; // 1rem:16px
+$size_500: $size_base * 1.125; // 1.125rem:18px
+$size_600: $size_base * 1.25; // 1.25rem:20px
+$size_700: $size_base * 1.5; //1.5rem:24px
+$size_800: $size_base * 2; // 2rem:32px
+$size_900: $size_base * 2.25; // 2.25rem:36px
+
+// Borders // shadows
+$border-radius: $size_base * 0.375; // 0.375rem:6px
+$shadow_inset_400: inset 1px 1px 4px 0 rgba($black, 0.1);
+$shadow_inset_450: inset -3px 1px 4px 0 rgba($black, 0.1);
+$shadow_400: 0 2px 6px 0 rgba($black, 0.1);
+
+// Animation
+$transition_timing: cubic-bezier(0.2, 1, 0.2, 1);
+$transition: all 0.3s $transition_timing;

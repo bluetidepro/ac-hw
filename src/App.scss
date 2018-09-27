@@ -1,0 +1,121 @@
+@import url('//fonts.googleapis.com/css?family=IBM+Plex+Sans:400,700|Poppins:400,600');
+@import 'scss/_vars.scss';
+
+// Base & Reset
+html {
+  box-sizing: border-box;
+  font-size: $size_base;
+}
+body {
+  background: $background;
+  color: $text;
+  position: relative;
+  font-family: $font_ibm_plex;
+  font-size: $size_base;
+  font-weight: $font_weight_400;
+  line-height: 1.4;
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  font-family: $font_poppins;
+  color: $heading;
+  margin-bottom: $size_400;
+  font-size: $size_700;
+  font-weight: $font_poppins_bold;
+}
+strong {
+  font-weight: $font_ibm_plex_semibold;
+}
+strong sup {
+  font-weight: $font_weight_400;
+  vertical-align: text-top;
+  font-size: $size_350;
+}
+p {
+  margin-bottom: $size_800;
+}
+p strong {
+  color: $heading;
+}
+kbd {
+  padding: $size_200;
+  color: $white;
+  letter-spacing: $size_100;
+  background-color: $grey_400;
+  border-radius: 0.2rem;
+}
+
+// App
+#Root {
+  margin: 0;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+}
+.App {
+  display: flex;
+  flex-direction: column;
+  margin: $size_700 auto 0 auto;
+  width: 100%; // 420px
+  max-width: 26.25rem; // 420px
+}
+.Card {
+  background: $white;
+  border-radius: $border-radius;
+  box-shadow: $shadow_400;
+  margin: 0;
+  padding: 0;
+}
+.CardBody {
+  padding: $size_900 $size_800;
+}
+button,
+.Button {
+  background: $green_400;
+  border-radius: $border-radius;
+  border: 1px solid $green_400;
+  color: $white;
+  cursor: pointer;
+  font-family: $font_poppins;
+  font-size: $size_500;
+  font-weight: $font_poppins_bold;
+  padding: $size_300;
+  position: relative;
+  text-align: center;
+  transition: $transition;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+
+  &:focus {
+    box-shadow: inset 0 1px 4px 0 rgba($green_500, 0.5);
+    outline: 0;
+  }
+  &:active,
+  &:hover {
+    background-color: $green_500;
+    border-color: $green_500;
+    text-decoration: none;
+  }
+  &:active {
+    box-shadow: inset 0 1px 6px 0 rgba($green_600, 0.8);
+  }
+}

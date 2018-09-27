@@ -1,0 +1,9 @@
+@import 'scss/_vars.scss';
+
+.DemoText {
+	text-align: center;
+	font-style: italic;
+	opacity: 0.6;
+	margin: $size_700 auto 0 auto;
+	font-size: $size_350;
+}

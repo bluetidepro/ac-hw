@@ -1,0 +1,54 @@
+@import 'scss/_vars.scss';
+
+.Alert {
+  background: $blue_200;
+  border-radius: $border-radius;
+  color: $blue_400;
+  margin: 0;
+  padding: $size_300 $size_400;
+  position: relative;
+
+  &._error {
+    background: $red_400;
+    color: $white;
+    font-size: $size_350;
+    margin: $size_300 0 0 0;
+    padding: $size_300;
+  }
+  &._hasArrow {
+    margin: 0 0 $size_500 0;
+
+    // &:before,
+    &:after {
+      top: 100%;
+      transition: $transition;
+      // Get the css var from the component, default to 0%
+      left: var(--alertAfterLeft, 0%);
+      border: solid transparent;
+      content: ' ';
+      height: 0;
+      width: 0;
+      position: absolute;
+      pointer-events: none;
+      border-top-color: $blue_200;
+      // border-top-color: red;
+      border-width: $size_350;
+      margin-left: -$size_350;
+    }
+    &._hasSpecialArrowStart {
+      &:after {
+        top: 88%;
+        margin-left: 0;
+        border-width: $size_400 $size_400 0 0;
+      }
+    }
+    &._hasSpecialArrowEnd {
+      &:after {
+        top: 88%;
+        margin-left: -$size_400;
+        transform: rotate(90deg);
+        border-width: $size_400 $size_400 0 0;
+      }
+    }
+  }
+}
