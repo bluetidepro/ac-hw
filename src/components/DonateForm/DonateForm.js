@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import Alert from 'components/Alert';
 import classNames from 'classnames';
@@ -50,7 +50,7 @@ class DonateForm extends Component {
     const { placeholder, validationError } = this.props;
 
     return (
-      <React.Fragment>
+      <Fragment>
         <form
           className={classNames('Form', {
             _isFocused: inputIsFocused
@@ -83,7 +83,7 @@ class DonateForm extends Component {
         {validationError && (
           <Alert isError hasArrow={false} text={validationError} />
         )}
-      </React.Fragment>
+      </Fragment>
     );
   }
 }

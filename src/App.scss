@@ -62,6 +62,15 @@ kbd {
   background-color: $grey_400;
   border-radius: 0.2rem;
 }
+a {
+  color: $blue_400;
+
+  &:hover,
+  &:focus {
+    color: darken($blue_400, 30%);
+    text-decoration: none;
+  }
+}
 
 // App
 #Root {
@@ -83,9 +92,6 @@ kbd {
   box-shadow: $shadow_400;
   margin: 0;
   padding: 0;
-}
-.CardBody {
-  padding: $size_900 $size_800;
 }
 button,
 .Button {

@@ -6,4 +6,8 @@
 	opacity: 0.6;
 	margin: $size_700 auto 0 auto;
 	font-size: $size_350;
+
+	+ .DemoText {
+		margin: $size_400 auto 0 auto;
+	}
 }
